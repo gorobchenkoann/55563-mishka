@@ -2,12 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="http://placehold.it/150x100" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
       </a>
       <nav class="top-menu top-menu--opened">
         <button class="top-menu__toggle top-menu__toggle--closed" type="button">
@@ -22,29 +24,33 @@
           </li>
         </ul>
         <ul class="top-menu__list user-list">
-          <li class="top-menu__item top-menu__item--search">
-              <a class="top-menu__link" href="#">Поиск по сайту</a>
+          <li class="top-menu__item">
+              <a class="top-menu__link" href="#">
+                Поиск по сайту
+              </a>
           </li>
-          <li class="top-menu__item top-menu__item--basket">
-              <a class="top-menu__link" href="#">Корзина: пока пуста</a>
+          <li class="top-menu__item">
+              <a class="top-menu__link" href="#">
+                Корзина: пока пуста
+              </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="page-content">
       <section class="intro intro--index-page">
-        <h1 class="intro__title">
-          Милые штучки ручной работы для дома
+        <h1 class="intro__title intro__title--index-page">
+          Милые штучки <br> ручной <br> работы для дома
         </h1>
-      </section>
-      <section class="products">
-        <h2 class="visually-hidden">Товары</h2>
-        <a class="products__item products__item--interior" href="#">
-          <span class="products__title">Предметы интерьера</span>
-        </a>
-        <a class="products__item products__item--toys" href="#">
-          <span class="products__title">Детские игрушки</span>
-        </a>
+        <div class="products">
+          <h2 class="visually-hidden">Товары</h2>
+          <a class="products__item products__item--interior" href="#">
+            <span class="products__title">Предметы интерьера</span>
+          </a>
+          <a class="products__item products__item--toys" href="#">
+            <span class="products__title">Детские игрушки</span>
+          </a>
+        </div>
       </section>
       <section class="hit">
         <div class="hit__heading">
@@ -71,7 +77,7 @@
           </table>
         </div>
         <div class="hit__image">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Товар недели">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недели">
         </div>
         <div class="hit__order">
           <p class="hit__price">Цена: 990 руб.</p>
@@ -123,22 +129,28 @@
         <a class="button" href="comment-form.html">Написать</a>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <table class="contacts__table">
-          <tr>
-            <td>e-mail:</td>
-            <td>info@mimimishkashop.ru</td>
-          </tr>
-          <tr>
-            <td>адрес:</td>
-            <td>г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101</td>
-          </tr>
-        </table>
-      <div class="contacts__map">
-
-      </div>
-      <a class="button" href="feedback-form.html">Напишите нам</a>
-    </section>
+        <div class="contacts__wrap">
+          <h2 class="contacts__title">Контакты</h2>
+          <table class="contacts__table">
+            <tr>
+              <td nowrap>e-mail:</td>
+              <td>
+                <a class="contacts__link" href="#">info@mimimishkashop.ru</a>
+              </td>
+            </tr>
+            <tr>
+              <td>адрес:</td>
+              <td>г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101</td>
+            </tr>
+          </table>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ef794bde1a5dc8b881213c8b0baa7bd4f78da7804ea7f22e878b7c3eeeb3a7e&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="320" height="455"></iframe>
+        </div>
+        <div class="contacts__wrap">
+          <a class="button contacts__button" href="feedback-form.html">Напишите нам</a>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__item social">
@@ -155,7 +167,7 @@
       <div class="page-footer__item copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="http://placehold.it/150x100" width="27" height="34" alt="Логотип HTMLAcademy">
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTMLAcademy">
         </a>
       </div>
     </footer>
@@ -171,7 +183,7 @@
           <input class="modal-form__input" type="radio" name="size-3" id="size-3">
           <label class="modal-form__label" for="size-3">L</label>
         </div>
-        <button class="button button-modal" type="submit">Добавить</button>
+        <button class="button modal-form__button" type="submit">Добавить</button>
       </form>
     </div>
   </body>

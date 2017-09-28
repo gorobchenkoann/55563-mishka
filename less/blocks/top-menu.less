@@ -1,0 +1,51 @@
+.top-menu__list {
+  .reset();
+  list-style: none;
+}
+
+.top-menu__item {
+  padding: 30px;
+  border-top: 1px solid @light-gray;
+}
+
+.top-menu__link {
+  position: relative;
+  padding-left: 45px;
+  font-size: 17px;
+  line-height: 24px;
+  color: @black;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
+}
+
+.top-menu__icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top-menu__toggle {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-repeat: no-repeat;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
