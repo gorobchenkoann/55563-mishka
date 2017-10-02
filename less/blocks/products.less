@@ -1,3 +1,8 @@
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
 .products__item {
   display: block;
   padding: 28px 30px;
@@ -28,4 +33,20 @@
   line-height: 24px;
   color: @white;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .products {
+    flex-direction: row;
+  }
+
+  .products__item {
+    width: 50%;
+    padding: 35px;
+  }
+
+  .products__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,4 +1,12 @@
 .catalog {
   .container();
-  padding: 0 30px;
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 129px;
+  }
 }

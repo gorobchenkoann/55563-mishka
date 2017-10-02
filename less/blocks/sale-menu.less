@@ -1,0 +1,24 @@
+.sale-menu {
+  display: none;
+  .reset();
+  list-style: none;
+}
+
+.sale-menu__link {
+  .menu-link-text();
+  font-size: 15px;
+}
+
+@media (min-width: @desktop-width) {
+  .sale-menu {
+    display: flex;
+    flex-wrap: wrap;
+    order: 4;
+    margin-top: 25px;
+    z-index: 1;
+  }
+
+  .sale-menu__item {
+    margin-right: 62px;
+  }
+}
