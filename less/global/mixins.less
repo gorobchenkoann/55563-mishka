@@ -50,8 +50,12 @@
 
 .menu-item {
   display: flex;
-  padding: 30px 0;
+  padding: 30px;
   border-top: 1px solid @light-gray;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 0;
+  }
 }
 
 .menu-link {
