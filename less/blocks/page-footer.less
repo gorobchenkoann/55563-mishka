@@ -1,10 +1,25 @@
 .page-footer {
-  .container();
-  padding: 0 30px;
   background-color: @light-gray;
+}
+
+.page-footer__wrap {
+  .container();
 }
 
 .page-footer__item {
   width: 100%;
-  padding: 25px 28px;
+  padding: 25px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer__item {
+    width: 33%;
+    padding: 58px 0;
+    outline: 1px solid @dark-green; //временно
+  }
 }
