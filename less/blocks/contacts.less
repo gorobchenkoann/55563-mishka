@@ -1,4 +1,5 @@
-.contacts__wrap {
+.contacts__wrap,
+.contacts__button-wrap {
   .container();
 }
 
@@ -67,8 +68,13 @@
   border: 0;
 }
 
+.contacts__button-wrap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .contacts__button {
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -103,9 +109,13 @@
     margin-bottom: 28px;
   }
 
+  .contacts__button-wrap {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
   .contacts__button {
     width: 230px;
-    margin: 52px auto;
   }
 }
 
@@ -141,7 +151,10 @@
     width: auto;
   }
 
-  .contacts__button {
-    margin-top: -50px;
+  .contacts__button-wrap {
+    width: 525px;
+    .reset();
+    margin-right: auto;
+    margin-top: -51px;
   }
 }
