@@ -2,6 +2,28 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.social__item {
+  margin-right: 41px;
+  line-height: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .social__icon,
+  &:focus .social__icon {
+    path {
+      fill: @hover-green;
+    }
+  }
+
+  &:active .social__icon {
+    path {
+      fill: fade(@hover-green, 30%);
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .social {
     border: none;

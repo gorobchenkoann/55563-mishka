@@ -6,6 +6,19 @@
   position: relative;
   .menu-link();
   .menu-link-text();
+
+  &:hover,
+  &:focus {
+    .user-list__icon path {
+      fill: @light-green;
+    }
+  }
+
+  &:active {
+    .user-list__icon path {
+      fill: fade(@light-green, 30%);
+    }
+  }
 }
 
 .user-list__icon {

@@ -72,8 +72,26 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__wrap {
+    padding-top: 50px;
+  }
+
   .contacts__title {
+    position: relative;
+    margin-bottom: 60px;
     .title-big();
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -23px;
+      right: 50px;
+      display: block;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .contacts__list {
@@ -104,6 +122,11 @@
     .reset();
     padding-left: 175px;
     padding-right: 47px;
+  }
+
+  .contacts__title::after {
+    left: -112px;
+    top: -17px;
   }
 
   .contacts__map {

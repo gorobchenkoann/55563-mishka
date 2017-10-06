@@ -1,9 +1,25 @@
 .footer-logo {
   display: none;
-}
 
-@media (min-width: @tablet-width) {
-  .footer-logo {
-    display: block;
+  &:hover .footer-logo__image,
+  &:focus .footer-logo__image {
+    fill: @hover-green;
+  }
+
+  &:active .footer-logo__image {
+    path {
+      fill: fade(@hover-green, 30%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
+
+.footer-logo__image {
+  margin-right: auto;
+  line-height: 0;
+}
+
+
