@@ -43,18 +43,6 @@
   color: @black;
   font-weight: 700;
 
-  &--radio:hover::before,
-  &--radio:focus::before,
-  &--checkbox:hover::before,
-  &--checkbox:focus::before {
-    border-color: @light-green;
-  }
-
-  &--radio:active::before,
-  &--checkbox:active::before {
-    border-color: @light-gray;
-  }
-
   &--radio::before,
   &--checkbox::before {
     content: "";
@@ -66,10 +54,23 @@
     height: 38px;
     border: 2px solid @dark-gray;
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
   &--radio::before {
     border-radius: 50%;
+  }
+
+  &--radio:hover::before,
+  &--radio:focus::before,
+  &--checkbox:hover::before,
+  &--checkbox:focus::before {
+    border-color: @light-green;
+  }
+
+  &--radio:active::before,
+  &--checkbox:active::before {
+    border-color: fade(@dark-gray, 30%);
   }
 }
 
@@ -113,6 +114,21 @@
   background-color: transparent;
 }
 
+.order-form__fieldset--tel,
+.order-form__fieldset--email {
+  position: relative;
+}
+
+.order-form__icon {
+  position: absolute;
+  top: 15px;
+  right: 0;
+
+  path {
+    fill: fade(@black, 20%);
+  }
+}
+
 .order-form__textarea {
   width: 100%;
   min-height: 142px;
@@ -122,6 +138,7 @@
   line-height: 18px;
   border: 2px solid @black;
   resize: none;
+  outline: none;
 }
 
 .order-form__text::placeholder,
@@ -132,6 +149,14 @@
 .order-form__text:focus,
 .order-form__textarea:focus {
   border-color: @light-green;
+  transition: all 0.2s ease;
+}
+
+.order-form__text:focus + .order-form__icon {
+  path {
+    fill: @light-green;
+    transition: all 0.2s ease;
+  }
 }
 
 .order-form__note {
@@ -226,6 +251,8 @@
   .order-form__input:checked ~ .order-form__label--checkbox::after {
     width: 33px;
     height: 22px;
+    top: 16px;
+    left: 11px;
   }
 }
 

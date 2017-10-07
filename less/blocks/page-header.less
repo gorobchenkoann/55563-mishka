@@ -1,38 +1,11 @@
 .page-header {
   position: relative;
-}
 
-.page-header__toggle {
-  display: none;
-  position: absolute;
-  right: 30px;
-  top: 33px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-  cursor: pointer;
-  outline: none;
-
-  &--open {
-    display: block;
-    background-image: url("../img/icon-menu-open.svg");
+  @media (max-width: @tablet-width) {
+    min-height: 80px;
   }
 
-  &--close {
-    display: block;
-    background-image: url("../img/icon-menu-close.svg");
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header {
+  @media (min-width: @tablet-width) {
     .container();
-  }
-
-  .page-header__toggle {
-    display: none;
   }
 }

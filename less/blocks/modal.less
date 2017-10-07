@@ -10,18 +10,22 @@
 }
 
 .modal__form {
-  .container();
-  margin-top: 100px;
+  width: 320px;
+  margin: auto;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 35px;
   padding-bottom: 45px;
   background-color: @white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  animation: open 0.6s;
 }
 
 .modal__title {
-  .title-big();
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
 }
@@ -73,4 +77,14 @@
   color: @white;
   border: none;
   cursor: pointer;
+}
+
+@keyframes open {
+  0% {
+    transform: translateY(-1000px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

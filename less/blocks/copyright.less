@@ -1,13 +1,39 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &:hover,
+  &:focus {
+    .copyright__logo path {
+      fill: @hover-green;
+    }
+  }
+
+  &:active {
+    .copyright__text {
+      color: fade(@black, 30%);
+    }
+
+    .copyright__logo path {
+      fill: fade(@hover-green, 30%);
+    }
+  }
 }
 
 .copyright__text {
   .reset();
+  margin-right: 30px;
   font-size: 19px;
   line-height: 18px;
   color: @black;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.copyright__logo {
+  line-height: 0;
+
+  path {
+    fill: @light-green;
+  }
 }

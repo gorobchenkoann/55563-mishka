@@ -3,23 +3,50 @@
 }
 
 .process__item {
+  display: flex;
+  flex-direction: column;
   padding: 30px 0;
   border: 1px solid @light-gray;
   margin-bottom: 55px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .process__title {
+  position: relative;
   .reset();
   padding-left: 90px;
   margin-bottom: 30px;
   font-size: 17px;
   color: @black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon-video.svg") no-repeat;
+  }
 }
 
 .process__video {
   position: relative;
   margin-bottom: 35px;
   line-height: 0;
+}
+
+.process__video-bg {
+  width: 100%;
+  height: auto;
 }
 
 .process__play-button {
@@ -59,21 +86,22 @@
 }
 
 @media (min-width: @tablet-width) {
-  .process {
+  .process__item {
     padding-top: 0;
     padding-bottom: 45px;
-    flex-direction: column;
   }
 
   .process__video {
     order: -1;
-    width: 100%;
-    height: 455px;
     outline: 1px solid @dark-green;
   }
 
   .process__title {
     font-size: 20px;
+
+    &::before {
+      top: -3px;
+    }
   }
 
   .process__description-text {
@@ -84,28 +112,42 @@
 
 @media (min-width: @desktop-width) {
   .process__item {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
   }
 
   .process__video {
-    order: -1;
-    width: 682px;
+    width: 65.1%;
+    height: 455px;
     margin: 0;
   }
 
   .process__title {
-    width: 100px;
+    order: 1;
+    width: 34.9%;
     padding-left: 75px;
-    padding-top: 102px;
+    padding-right: 60px;
+    padding-top: 95px;
+    margin-bottom: auto;
+
+    &::before {
+      left: 75px;
+      top: 40px;
+    }
   }
 
   .process__description {
-    width: 368px;
-    padding-left: 80px;
-    padding-right: 58px;
+    order: 2;
+    width: 35.1%;
+    padding-left: 75px;
+    padding-right: 60px;
+    padding-bottom: 40px;
     margin-left: auto;
     margin-top: -260px;
+  }
+
+  .process__description-text {
+    margin-bottom: 40px;
   }
 }

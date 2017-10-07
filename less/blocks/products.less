@@ -4,8 +4,8 @@
 }
 
 .products__item {
-  display: block;
-  padding: 28px 30px;
+  display: flex;
+  padding: 30px;
 
   &--interior {
     background-color: @light-green;
@@ -18,13 +18,29 @@
   &:hover,
   &:focus {
     margin-top: -5px;
-    padding-bottom: 33px;
+    padding-bottom: 35px;
+
+    .products__icon {
+      fill: fade(@icon-green, 70%);
+    }
   }
 
-  &:active .products__title {
-    color: rgba(255, 255, 255, 0.3);
+  &:active {
+    .products__title {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .products__icon {
+      fill: fade(@icon-green, 30%);
+    }
   }
 }
+
+.products__icon {
+  margin-left: auto;
+  fill: fade(@icon-green, 50%);
+}
+
 
 .products__title {
   display: block;
@@ -43,6 +59,11 @@
   .products__item {
     width: 50%;
     padding: 35px;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 40px;
+    }
   }
 
   .products__title {
