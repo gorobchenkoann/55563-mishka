@@ -2,13 +2,14 @@
   padding-bottom: 55px;
 }
 
-.order-form__fieldset {
+.order-form__wrap {
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 35px;
 }
 
 .order-form__legend {
+  display: flex;
   .reset();
   margin-bottom: 28px;
   font-size: 17px;
@@ -16,6 +17,16 @@
   color: @light-green;
   font-weight: 700;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: block;
+    align-self: center;
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 25px;
+    background-color: @dark-green;
+  }
 }
 
 .order-form__list {
@@ -114,8 +125,8 @@
   background-color: transparent;
 }
 
-.order-form__fieldset--tel,
-.order-form__fieldset--email {
+.order-form__wrap--tel,
+.order-form__wrap--email {
   position: relative;
 }
 
@@ -167,7 +178,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .order-form__fieldset {
+  .order-form__wrap {
     .container();
     display: flex;
     flex-direction: row;
@@ -176,11 +187,11 @@
     margin-bottom: 0;
   }
 
-  .order-form__fieldset--tel {
+  .order-form__wrap--tel {
     padding-bottom: 0;
   }
 
-  .order-form__fieldset--email {
+  .order-form__wrap--email {
     padding-top: 0;
   }
 
@@ -193,6 +204,10 @@
     min-width: 60px;
     margin-top: 22px;
     margin-right: 108px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .order-form__list {

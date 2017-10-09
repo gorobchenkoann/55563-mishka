@@ -54,15 +54,10 @@
 
 .top-menu__logo {
   display: block;
-  width: 100%;
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
-
-.top-menu__logo-image {
-  display: block;
   width: 86px;
   margin: 0 auto;
+  padding-top: 22px;
+  padding-bottom: 22px;
   line-height: 0;
 
   &:hover,
@@ -90,22 +85,17 @@
   .top-menu__logo {
     width: 120px;
     order: 1;
+    margin: 0;
     margin-right: auto;
     border: none;
-  }
-
-  .top-menu__logo-image {
-    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .top-menu__logo {
-    flex-grow: 1;
-    margin-right: 0;
-  }
-
-  .top-menu__logo-image {
+    width: 160px;
+    padding: 0;
+    padding-top: 5px;
     margin: 0 auto;
   }
 }

@@ -1,4 +1,19 @@
 .hit {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg");
+    background-size: 320px 6px;
+  }
+}
+
+.hit__wrap {
   display: flex;
   flex-direction: column;
   .container();
@@ -47,8 +62,8 @@
   line-height: 0;
 
   img {
+    display: block;
     width: 100%;
-    height: auto;
   }
 }
 
@@ -62,7 +77,14 @@
 }
 
 @media (min-width: @tablet-width) {
-  .hit {
+  .hit::after {
+    height: 23px;
+    background-position: 50%;
+    background-size: 768px 23px;
+    background-repeat: no-repeat;
+  }
+
+  .hit__wrap {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -110,7 +132,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .hit {
+  .hit::after {
+    background-size: 1050px 23px;
+  }
+
+  .hit__wrap {
     padding-top: 69px;
     flex-direction: column;
   }
