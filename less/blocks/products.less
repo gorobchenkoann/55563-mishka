@@ -5,7 +5,7 @@
 
 .products__item {
   display: flex;
-  padding: 30px;
+  padding: 25px 30px 18px;
 
   &--interior {
     background-color: @light-green;
@@ -18,7 +18,7 @@
   &:hover,
   &:focus {
     margin-top: -5px;
-    padding-bottom: 35px;
+    padding-bottom: 23px;
 
     .products__icon {
       fill: fade(@icon-green, 70%);
@@ -64,7 +64,7 @@
 
     &:hover,
     &:focus {
-      padding-bottom: 50px;
+      padding-bottom: 42px;
     }
   }
 
@@ -77,5 +77,10 @@
 @media (min-width: @desktop-width) {
   .products__item {
     padding-bottom: 45px;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 50px;
+    }
   }
 }
