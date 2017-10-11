@@ -4,12 +4,13 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     left: 0;
     width: 100%;
-    height: 6px;
+    height: 7px;
     background: url("../img/bg-zigzag-line.svg");
-    background-size: 320px 6px;
+    background-size: cover;
+    background-position: 7px 0;
   }
 }
 
@@ -50,7 +51,7 @@
 .hit__table td {
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-right: 25px;
+  padding-right: 26px;
   border-bottom: 1px solid @light-gray;
   border-collapse: collapse;
 }
@@ -78,8 +79,8 @@
 
 @media (min-width: @tablet-width) {
   .hit::after {
+    bottom: -4px;
     height: 23px;
-    background-position: 50%;
     background-size: 768px 23px;
     background-repeat: no-repeat;
   }
@@ -123,6 +124,7 @@
   .hit__table td {
     padding-top: 9px;
     padding-bottom: 9px;
+    padding-right: 0;
   }
 
   .hit__image {
@@ -137,19 +139,21 @@
   }
 
   .hit__price {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .hit::after {
+    bottom: 0;
     background-size: 1050px 23px;
+    background-position: 25px 0;
   }
 
   .hit__wrap {
     flex-direction: column;
-    padding-top: 55px;
+    padding-top: 50px;
     padding-bottom: 98px;
   }
 
@@ -167,6 +171,7 @@
   .hit__subtitle {
     order: -1;
     margin: auto;
+    padding-top: 10px;
     font-size: 17px;
     line-height: 17px;
   }
@@ -177,6 +182,10 @@
 
   .hit__table {
     margin-bottom: 105px;
+  }
+
+  .hit__table td {
+    padding-bottom: 11px;
   }
 
   .hit__order {

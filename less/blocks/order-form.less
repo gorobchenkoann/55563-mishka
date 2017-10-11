@@ -3,9 +3,11 @@
 }
 
 .order-form__wrap {
-  padding-left: 40px;
-  padding-right: 40px;
+  width: 320px;
+  margin: 0 auto;
   margin-bottom: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   &--name {
     margin-top: 6px;
@@ -202,7 +204,7 @@
 
 @media (min-width: @tablet-width) {
   .order-form {
-    padding-bottom: 52px;
+    padding-bottom: 49px;
   }
 
   .order-form__wrap {
@@ -219,11 +221,11 @@
     &--name,
     &--email {
       margin-top: 0;
-      padding-bottom: 23px;
+      padding-bottom: 22px;
     }
 
     &--tel {
-      margin-top: 5px;
+      margin-top: 10px;
       padding-bottom: 0;
     }
   }
@@ -239,7 +241,7 @@
   }
 
   .order-form__wrap--textarea {
-    margin-bottom: 9px;
+    margin-bottom: 7px;
   }
 
   .order-form__fieldset--gray {
@@ -279,7 +281,8 @@
   }
 
   .order-form__icon {
-    top: 0;
+    top: 10px;
+    right: 25px;
   }
 
   .order-form__item--radio,
@@ -346,24 +349,36 @@
 }
 
 @media (min-width: @desktop-width) {
-  .order-form__wrap {
-    padding-top: 50px;
+  .order-form {
+    padding-bottom: 53px;
+  }
 
-    &--checkbox,
-    &--name,
-    &--email {
+  .order-form__wrap {
+    padding-top: 51px;
+    padding-bottom: 50px;
+
+    &--checkbox {
       padding-bottom: 27px;
+    }
+
+    &--name {
+      padding-bottom: 20px;
+    }
+
+    &--tel {
+      padding-bottom: 2px;
     }
 
     &--email {
       padding-top: 0;
+      padding-bottom: 26px;
     }
   }
 
   .order-form__legend {
     min-width: 175px;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-left: 60px;
   }
 
@@ -371,26 +386,29 @@
     width: 700px;
   }
 
-  .order-form__list--checkbox {
-    justify-content: flex-start;
-  }
-
   .order-form__item--radio {
     width: 100%;
+    margin-top: 0;
   }
 
   .order-form__item--checkbox {
     width: 262px;
-    margin-top: 2px;
+  }
+
+  .order-form__list--checkbox {
+    justify-content: flex-start;
   }
 
   .order-form__note {
     margin-right: 175px;
   }
 
+  .order-form__wrap--textarea {
+    margin-bottom: 0;
+  }
+
   .order-form__textarea {
     width: 66.5%;
-    margin-bottom: 0;
   }
 
   .order-form__button {
