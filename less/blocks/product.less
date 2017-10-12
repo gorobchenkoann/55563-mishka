@@ -1,7 +1,6 @@
 .product {
   position: relative;
-  margin: 30px 0;
-  border: 1px solid @light-gray;
+  margin: 31px 0;
 
   &:hover .product__description {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -14,52 +13,27 @@
 
 .product__title {
   .reset();
+  margin-bottom: 6px;
 }
 
 .product__photo {
   display: block;
   line-height: 0;
+
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .product__description {
   display: flex;
   flex-direction: column;
-  padding: 28px;
-}
-
-.product__about {
-  .reset();
-  margin-bottom: auto;
-  font-size: 13px;
-  line-height: 30px;
-}
-
-.product__order {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  padding-top: 20px;
-  border-top: 1px solid @light-gray;
-}
-
-.product__button {
-  margin-left: auto;
-  line-height: 0;
-}
-
-.product__icon {
-  path {
-    fill: fade(@black, 20%);
-  }
-
-  &:hover path,
-  &:focus path {
-    fill: @light-green;
-  }
-
-  &:active path {
-    fill: fade(@light-green, 30%);
-  }
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 26px;
+  padding-right: 28px;
+  border: 1px solid @light-gray;
 }
 
 .product__link {
@@ -78,6 +52,41 @@
   }
 }
 
+.product__about {
+  .reset();
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.product__order {
+  display: flex;
+  align-items: center;
+  margin-top: 17px;
+  padding-top: 25px;
+  border-top: 1px solid @light-gray;
+}
+
+.product__button {
+  margin-left: auto;
+  margin-top: -5px;
+  line-height: 0;
+}
+
+.product__icon {
+  path {
+    fill: fade(@black, 20%);
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: @light-green;
+  }
+
+  &:active path {
+    fill: fade(@light-green, 30%);
+  }
+}
+
 .product__price {
   .reset();
   color: @black;
@@ -87,14 +96,13 @@
 @media (min-width: @tablet-width) {
   .product {
     display: flex;
-    margin-top: 55px;
-    margin-bottom: 80px;
+    align-items: stretch;
+    margin-bottom: 54px;
   }
 
   .product__photo {
     width: 50%;
-    height: 334px;
-    outline: 1px solid @dark-green;
+    min-height: 334px;
   }
 
   .product__description {
@@ -110,12 +118,19 @@
     padding-bottom: 15px;
     font-size: 15px;
   }
+
+  .product__order {
+    margin-top: auto;
+    padding-top: 18px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .product {
     flex-direction: column;
     width: 316px;
+    margin-top: 55px;
+    margin-bottom: 55px;
   }
 
   .product__photo {
@@ -130,5 +145,6 @@
 
   .product__order {
     margin-top: auto;
+    padding-top: 18px;
   }
 }

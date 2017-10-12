@@ -1,5 +1,6 @@
 .features {
   .container();
+  padding-top: 27px;
 }
 
 .features__title {
@@ -17,14 +18,14 @@
   .title-small();
   position: relative;
   padding-top: 57px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   color: @black;
 }
 
 .features__icon {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 5px;
+  left: 5px;
 
   path {
     fill: @light-green;
@@ -33,7 +34,12 @@
 
 @media (min-width: @tablet-width) {
   .features {
-    margin-bottom: 25px;
+    padding-top: 48px;
+    padding-bottom: 25px;
+  }
+
+  .features__title {
+    margin-bottom: 47px;
   }
 
   .features__list {
@@ -43,8 +49,7 @@
 
   .features__item {
     width: 50%;
-    padding-right: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   .features__item--clew {
@@ -70,6 +75,14 @@
 
 @media (min-width: @desktop-width) {
   .features {
+    padding-top: 60px;
     padding-left: 225px;
+    margin-bottom: 13px;
+  }
+
+  .features__item {
+    width: 350px;
+    padding-right: 40px;
+    margin-bottom: 55px;
   }
 }

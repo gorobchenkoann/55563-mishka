@@ -5,7 +5,10 @@
 
 .products__item {
   display: flex;
-  padding: 30px;
+  padding-top: 25px;
+  padding-bottom: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   &--interior {
     background-color: @light-green;
@@ -18,7 +21,7 @@
   &:hover,
   &:focus {
     margin-top: -5px;
-    padding-bottom: 35px;
+    padding-bottom: 23px;
 
     .products__icon {
       fill: fade(@icon-green, 70%);
@@ -58,16 +61,30 @@
 
   .products__item {
     width: 50%;
-    padding: 35px;
+    padding-top: 28px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 37px;
 
     &:hover,
     &:focus {
-      padding-bottom: 40px;
+      padding-bottom: 42px;
     }
   }
 
   .products__title {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products__item {
+    padding-bottom: 45px;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 50px;
+    }
   }
 }

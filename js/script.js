@@ -25,7 +25,6 @@ function init() {
 var menu = document.querySelector(".top-menu");
 var button = document.querySelector(".top-menu__toggle");
 
-
 document.addEventListener("DOMContentLoaded", function(){
   menu.classList.remove("nojs");
   menu.classList.add("top-menu--closed");
@@ -47,7 +46,6 @@ button.addEventListener("click", function(e) {
 var modal = document.querySelector(".modal");
 var modal_form = document.querySelector(".modal__form");
 var modal_button = document.querySelectorAll(".modal-button");
-console.log(modal_button);
 
 Array.from(document.querySelectorAll(".modal-button")).forEach(function(item){
   item.addEventListener("click", function(e) {

@@ -3,11 +3,14 @@
   flex-direction: column;
   .container();
   padding-top: 29px;
-  padding-bottom: 40px;
+  padding-bottom: 43px;
+  background: url("../img/bg-zigzag-line.svg") no-repeat;
+  background-position: 50% bottom;
+  background-size: 100% 6px;
 }
 
 .hit__heading {
-  margin-bottom: 21px;
+  margin-bottom: 26px;
 }
 
 .hit__title {
@@ -24,18 +27,18 @@
 
 .hit__description {
   .reset();
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .hit__table {
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .hit__table td {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-right: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 26px;
   border-bottom: 1px solid @light-gray;
   border-collapse: collapse;
 }
@@ -43,12 +46,12 @@
 .hit__image {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   line-height: 0;
 
   img {
+    display: block;
     width: 100%;
-    height: auto;
   }
 }
 
@@ -66,8 +69,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 55px;
+    padding-top: 37px;
     padding-bottom: 70px;
+    background-size: auto 16px;
+    background-position: 6px bottom;
   }
 
   .hit__heading {
@@ -76,7 +81,7 @@
     flex-direction: row;
     align-items: flex-end;
     margin-right: 29px;
-    margin-bottom: 55px;
+    margin-bottom: 47px;
   }
 
   .hit__about {
@@ -89,30 +94,45 @@
     text-align: center;
   }
 
+  .hit__description {
+    margin-bottom: 36px;
+  }
+
   .hit__table {
     font-size: 15px;
     line-height: 20px;
   }
 
+  .hit__table td {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 0;
+  }
+
   .hit__image {
     width: 334px;
     margin: 0;
+    margin-top: 7px;
   }
 
   .hit__order {
     width: 290px;
-    margin-top: -108px;
+    margin-top: -114px;
   }
 
   .hit__price {
+    margin-bottom: 32px;
     font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .hit {
-    padding-top: 69px;
     flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 98px;
+    background-position: center bottom;
+    background-size: 1050px 23px;
   }
 
   .hit__image {
@@ -123,20 +143,27 @@
 
   .hit__heading {
     width: 700px;
-    margin-top: -604px;
+    margin-top: -585px;
   }
 
   .hit__subtitle {
     order: -1;
     margin: auto;
+    padding-top: 10px;
+    font-size: 17px;
+    line-height: 17px;
   }
 
   .hit__description {
-    margin-bottom: 65px;
+    margin-bottom: 48px;
   }
 
   .hit__table {
-    margin-bottom: 124px;
+    margin-bottom: 105px;
+  }
+
+  .hit__table td {
+    padding-bottom: 11px;
   }
 
   .hit__order {

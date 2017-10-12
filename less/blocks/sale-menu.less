@@ -14,21 +14,35 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) {
   .sale-menu {
     display: flex;
     flex-wrap: wrap;
     order: 4;
-    margin-top: 25px;
+    margin-top: 16px;
     z-index: 1;
   }
 
   .sale-menu__item {
+    display: none;
+  }
+
+  .sale-menu__item--delivery {
+    display: block;
+    margin-top: -64px;
+    margin-left: auto;
+    // margin-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sale-menu__item {
+    display: block;
     margin-right: 62px;
   }
 
   .sale-menu__item--delivery {
-    margin-left: auto;
+    margin-top: 0;
     margin-right: 0;
   }
 }
