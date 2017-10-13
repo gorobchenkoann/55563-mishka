@@ -4,7 +4,7 @@
 
   &:hover,
   &:focus {
-    .copyright__logo path {
+    .copyright__logo {
       fill: @hover-green;
     }
   }
@@ -14,7 +14,7 @@
       color: fade(@black, 30%);
     }
 
-    .copyright__logo path {
+    .copyright__logo {
       fill: fade(@hover-green, 30%);
     }
   }
@@ -35,8 +35,5 @@
 
 .copyright__logo {
   line-height: 0;
-
-  path {
-    fill: @light-green;
-  }
+  fill: @light-green;
 }
