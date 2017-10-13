@@ -9,13 +9,13 @@
 
   &:hover,
   &:focus {
-    .user-list__icon path {
+    .user-list__icon {
       fill: @light-green;
     }
   }
 
   &:active {
-    .user-list__icon path {
+    .user-list__icon {
       fill: fade(@light-green, 30%);
     }
   }
@@ -29,9 +29,7 @@
   width: 18px;
   height: 18px;
 
-  path {
-    fill: fade(@black, 20%);
-  }
+  fill: fade(@black, 20%);
 }
 
 @media (min-width: @tablet-width) {
