@@ -129,7 +129,7 @@
 @media (min-width: @desktop-width) {
   .hit {
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 108px;
     padding-bottom: 98px;
     background-position: center bottom;
     background-size: 1050px 23px;
@@ -137,13 +137,13 @@
 
   .hit__image {
     width: 525px;
-    order: -1;
+    margin-top: -525px;
     margin-left: auto;
   }
 
   .hit__heading {
     width: 700px;
-    margin-top: -585px;
+    z-index: 1;
   }
 
   .hit__subtitle {
@@ -167,7 +167,7 @@
   }
 
   .hit__order {
-    margin-top: 0;
+    margin-bottom: auto;
     margin-left: 175px;
   }
 

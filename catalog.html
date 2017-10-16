@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="top-menu top-menu--nojs">
         <button class="top-menu__toggle" type="button">
@@ -31,7 +38,7 @@
           <li class="user-list__item user-list__item--search">
               <a class="user-list__link " href="#">
                 <svg class="user-list__icon" width="17.6" height="17.6">
-                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                  <use xlink:href="#icon-search"></use>
                 </svg>
                 Поиск по сайту
               </a>
@@ -39,7 +46,7 @@
           <li class="user-list__item user-list__item--basket">
               <a class="user-list__link" href="#">
                 <svg class="user-list__icon" width="20.294" height="18.849">
-                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста
               </a>
@@ -90,7 +97,7 @@
               <a class="product__button modal-button" href="#" title="Добавить в корзину">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product__icon" width="20.294px" height="18.849px">
-                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -118,7 +125,7 @@
               <a class="product__button modal-button" href="#" title="Добавить в корзину">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product__icon" width="20.294px" height="18.849px">
-                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -146,7 +153,7 @@
               <a class="product__button modal-button" href="#" title="Добавить в корзину">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product__icon" width="20.294px" height="18.849px">
-                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -183,33 +190,33 @@
       <div class="page-footer__wrap">
         <a class="page-footer__item footer-logo" href="index.html" title="Логотип магазина «Мишка»">
           <svg class="footer-logo__image" width="101.615" height="34.056">
-            <use xlink:href="img/sprite.svg#footer-logo"></use>
+            <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
         <div class="page-footer__item social">
           <a class="social__item social__item--instagram" href="#">
             <span class="visually-hidden">Instagram</span>
             <svg class="social__icon" width="21.769" height="21.334">
-              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
           <a class="social__item social__item--facebook" href="#">
             <span class="visually-hidden">Facebook</span>
             <svg class="social__icon" width="14.962" height="27.718">
-              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
           <a class="social__item social__item--twitter" href="#">
             <span class="visually-hidden">Twitter</span>
             <svg class="social__icon" width="23.494" height="20.168">
-              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </div>
         <a class="page-footer__item copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__logo" width="26.943" height="34.09">
-            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
