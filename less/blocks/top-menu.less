@@ -1,36 +1,5 @@
 .top-menu {
   width: 100%;
-
-  @media (max-width: @tablet-width) {
-    &--nojs {
-      display: block;
-    }
-
-    &--opened {
-      position: absolute;
-      top: 0;
-      // left: 50%;
-      // transform: translateX(-50%);
-      background-color: @white;
-      z-index: 100;
-
-      .top-menu__toggle {
-        display: block;
-        background-image: url("../img/icon-menu-close.svg");
-      }
-    }
-
-    &--closed {
-      .top-menu__list {
-        display: none;
-      }
-
-      .top-menu__toggle {
-        display: block;
-        background-image: url("../img/icon-menu-open.svg");
-      }
-    }
-  }
 }
 
 .top-menu__toggle {
@@ -67,6 +36,35 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-menu--nojs {
+    display: block;
+  }
+
+  .top-menu--opened {
+    position: absolute;
+    top: 0;
+    background-color: @white;
+    z-index: 100;
+
+    .top-menu__toggle {
+      display: block;
+      background-image: url("../img/icon-menu-close.svg");
+    }
+  }
+
+  .top-menu--closed {
+    .top-menu__list {
+      display: none;
+    }
+
+    .top-menu__toggle {
+      display: block;
+      background-image: url("../img/icon-menu-open.svg");
+    }
   }
 }
 
