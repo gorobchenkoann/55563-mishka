@@ -1,5 +1,5 @@
 .order-form {
-  padding-bottom: 22px;
+  padding-bottom: 20px;
 }
 
 .order-form__wrap {
@@ -147,22 +147,30 @@
   margin-bottom: 0;
 }
 
-.order-form__text--email,
+.order-form__wrap--tel {
+  margin-top: -5px;
+}
+
 .order-form__text--tel {
+  margin-top: -33px;
+}
+
+.order-form__text--email {
   margin-top: -28px;
 }
 
 .order-form__icon {
   position: absolute;
   top: -10px;
-  right: 10px;
+  right: 5px;
   fill: fade(@black, 20%);
 }
 
 .order-form__textarea {
   width: 100%;
   min-height: 140px;
-  padding: 17px;
+  padding: 15px;
+  margin-top: -5px;
   font-size: 17px;
   line-height: 18px;
   border: 2px solid @black;
@@ -192,7 +200,7 @@
 
 .order-form__note {
   .reset();
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -237,6 +245,11 @@
 
   .order-form__wrap--textarea {
     margin-bottom: 7px;
+  }
+
+  .order-form__textarea {
+    margin-top: 0;
+    font-size: 19px;
   }
 
   .order-form__fieldset--gray {
@@ -392,6 +405,10 @@
 
   .order-form__list--checkbox {
     justify-content: flex-start;
+  }
+
+  .order-form__icon {
+    right: 5px;
   }
 
   .order-form__note {
