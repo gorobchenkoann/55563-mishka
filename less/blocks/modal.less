@@ -14,14 +14,18 @@
   margin: auto;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 35px;
+  padding-top: 30px;
   padding-bottom: 45px;
   background-color: @white;
+  border-top: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   animation: open 0.6s;
 }
 
 .modal__title {
+  .reset();
+  padding: 0 55px;
+  margin-bottom: 12px;
   font-size: 25px;
   line-height: 30px;
   color: @black;
@@ -31,6 +35,8 @@
 }
 
 .modal__text {
+  .reset();
+  margin-bottom: 22px;
   font-size: 15px;
   line-height: 30px;
   text-align: center;
@@ -39,7 +45,7 @@
 .modal__sizes {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .modal__input {
@@ -73,6 +79,8 @@
 }
 
 .modal__button {
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: @light-green;
   color: @white;
   border: none;
