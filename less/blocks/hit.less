@@ -4,7 +4,7 @@
   flex-direction: column;
   .container();
   padding-top: 29px;
-  padding-bottom: 43px;
+  padding-bottom: 41px;
 
   &::after {
     content: "";
@@ -22,12 +22,13 @@
 }
 
 .hit__heading {
-  margin-bottom: 26px;
+  margin-bottom: 23px;
 }
 
 .hit__title {
   .reset();
   .title-big();
+  margin-bottom: 3px;
 }
 
 .hit__subtitle {
@@ -39,18 +40,19 @@
 
 .hit__description {
   .reset();
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hit__table {
   width: 100%;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
+  border-collapse: collapse;
 }
 
 .hit__table td {
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-right: 26px;
+  padding-right: 20px;
   border-bottom: 1px solid @light-gray;
   border-collapse: collapse;
 }
@@ -69,7 +71,7 @@
 
 .hit__price {
   .reset();
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   font-size: 17px;
   color: @dark-gray;
   font-weight: 700;
@@ -82,13 +84,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 37px;
-    padding-bottom: 70px;
+    padding-bottom: 67px;
 
     &::after {
       width: 768px;
       height: 16px;
-      background-size: auto 16px;
-      background-position: 20px 50%;
+      background-size: 768px 16px;
+      background-position: 16px 50%;
     }
   }
 
@@ -96,23 +98,29 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     margin-right: 29px;
-    margin-bottom: 47px;
+    margin-bottom: 42px;
   }
 
   .hit__about {
     width: 290px;
   }
 
+  .hit__title {
+    margin-bottom: 6px;
+  }
+
   .hit__subtitle {
     width: 71px;
     margin-left: auto;
+    font-size: 17px;
+    line-height: 17px;
     text-align: center;
   }
 
   .hit__description {
-    margin-bottom: 36px;
+    margin-bottom: 35px;
   }
 
   .hit__table {
@@ -121,8 +129,8 @@
   }
 
   .hit__table td {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-right: 0;
   }
 
@@ -147,7 +155,7 @@
   .hit {
     flex-direction: column;
     padding-top: 108px;
-    padding-bottom: 98px;
+    padding-bottom: 96px;
 
     &::after {
       left: 50px;
@@ -172,21 +180,22 @@
   .hit__subtitle {
     order: -1;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 17px;
     line-height: 17px;
   }
 
   .hit__description {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
   .hit__table {
-    margin-bottom: 105px;
+    margin-bottom: 108px;
   }
 
   .hit__table td {
-    padding-bottom: 11px;
+    padding-top: 6px;
+    padding-bottom: 13px;
   }
 
   .hit__order {
