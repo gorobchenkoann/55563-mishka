@@ -18,6 +18,7 @@ var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var run = require("run-sequence");
+var deploy = require("gulp-gh-pages");
 var server = require("browser-sync").create();
 
 gulp.task("copy", function () {
@@ -83,9 +84,9 @@ gulp.task("sprite", function () {
 
 gulp.task("html", function () {
   return gulp.src("*.html")
-  .pipe(posthtml([
-    include()
-  ]))
+    .pipe(posthtml([
+      include()
+    ]))
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build"));
 });
@@ -109,6 +110,11 @@ gulp.task("serve", function () {
   gulp.watch("*.html", ["html"]);
 });
 
+gulp.task("deploy", function () {
+  return gulp.src("build/**/*")
+    .pipe(deploy())
+});
+
 gulp.task("build", function (done) {
   run(
     "clean",
@@ -119,6 +125,7 @@ gulp.task("build", function (done) {
     "webp",
     "html",
     "js",
+    "deploy",
     done
   );
 });
